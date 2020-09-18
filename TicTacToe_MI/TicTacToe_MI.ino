@@ -4,6 +4,8 @@ const int d = 4;
 const int e = 5;
 const bool h = HIGH;
 const bool l = LOW;
+const int gr = 13;
+const int bl = 12;
 
 void setup() {
   // put your setup code here, to run once:
@@ -11,14 +13,19 @@ void setup() {
   pinMode(c, OUTPUT);
   pinMode(d, OUTPUT);
   pinMode(e, OUTPUT);
+  pinMode(gr, OUTPUT);
+  pinMode(bl, OUTPUT);
 }
-const int de = 500;
+const int de = 2000;
 void loop() {
   // put your main code here, to run repeatedly:
   digitalWrite(b, l);
   digitalWrite(c, l);
   digitalWrite(d, l);
   digitalWrite(e, l);
+  digitalWrite(gr, l);
+  digitalWrite(bl, l);
+  blue();
   delay(de);
   p1();
   delay(de);
@@ -38,7 +45,6 @@ void loop() {
   delay(de);
   p9();
   delay(de);
-  
 }
 
 void p1 (){
@@ -102,4 +108,19 @@ void p9 (){
   digitalWrite(c, l);
   digitalWrite(d, l);
   digitalWrite(e, h);
+}
+
+void green () {
+  digitalWrite(gr, h);
+  digitalWrite(bl, l);
+}
+
+void blue() {
+  digitalWrite(gr, l);
+  digitalWrite(bl, h);
+}
+
+void cOff() {
+  digitalWrite(gr, l);
+  digitalWrite(bl, l);  
 }
