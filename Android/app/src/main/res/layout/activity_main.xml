@@ -11,25 +11,24 @@
         android:id="@+id/buttonUp"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
         android:rotation="-90"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAction"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonAction"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
         android:id="@+id/buttonDown"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="25dp"
         android:rotation="90"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/buttonUp"
-        app:layout_constraintStart_toStartOf="@+id/buttonUp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUp"
-        app:layout_constraintVertical_bias="0.855"
+        app:layout_constraintEnd_toStartOf="@+id/buttonRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonAction"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAction"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <TextView
@@ -63,32 +62,30 @@
         android:id="@+id/buttonRight"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonUp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAction"
+        app:layout_constraintStart_toEndOf="@+id/buttonAction"
+        app:layout_constraintTop_toTopOf="@+id/buttonAction"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
         android:id="@+id/buttonLeft"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:rotation="180"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonRight"
-        app:layout_constraintEnd_toStartOf="@+id/buttonUp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonRight"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonAction"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAction"
+        app:layout_constraintTop_toTopOf="@+id/buttonAction"
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
     <ImageView
         android:id="@+id/buttonAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonLeft"
-        app:layout_constraintEnd_toEndOf="@+id/buttonUp"
-        app:layout_constraintStart_toStartOf="@+id/buttonDown"
-        app:layout_constraintTop_toTopOf="@+id/buttonRight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/ic_baseline_center_focus_weak_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
